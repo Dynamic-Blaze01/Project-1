@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dynamicx store</title>
+  <link rel="stylesheet" href="project.css">
+</head>
+<body class="landing-page">
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="image/logo.png" alt="DYNAMICX">
+    </div>
+    <h1 class="head">DYNAMICX APPAREL</h1>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1 class="Hero-Text">
+      Wear the Energy.<br>
+      Live the Moment.
+    </h1>
+    <h4 class="Sub-Hero">
+      Premium streetwear built for confidence, comfort, and everyday dominance.
+    </h4>
+  </div>
+
+  <!-- SHOP NOW -->
+  <div class="footer">
+    <button class="btn" onclick="goToStore()">Shop Now</button>
+  </div>
+
+<script>
+  function goToStore() {
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+      window.location.href = 'projectstore.html';
+    }, 600);
+  }
+</script>
+</body>
+</html>
