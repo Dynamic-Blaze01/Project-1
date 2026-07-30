@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DYNAMICX — Checkout</title>
+  <link rel="stylesheet" href="project.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="checkout-page">
+
+  <!-- HEADER -->
+  <header class="co-header">
+    <button class="co-back-btn" onclick="history.back()">
+      <i class="fas fa-arrow-left"></i>
+    </button>
+    <span class="co-header-title">CHECKOUT</span>
+    <span style="width:36px"></span>
+  </header>
+
+  <!-- STEP INDICATOR -->
+  <div class="co-steps">
+    <div class="co-step active" id="step-dot-1">
+      <div class="co-step-dot">1</div>
+      <div class="co-step-label">Delivery</div>
+    </div>
+    <div class="co-step-line" id="co-line-1"></div>
+    <div class="co-step" id="step-dot-2">
+      <div class="co-step-dot">2</div>
+      <div class="co-step-label">Payment</div>
+    </div>
+    <div class="co-step-line" id="co-line-2"></div>
+    <div class="co-step" id="step-dot-3">
+      <div class="co-step-dot">3</div>
+      <div class="co-step-label">Review</div>
+    </div>
+  </div>
+
+  <!-- ORDER SUMMARY BAR -->
+  <div class="co-summary-bar" onclick="toggleSummaryBar()">
+    <div class="co-summary-toggle">
+      <i class="fas fa-shopping-bag co-summary-icon"></i>
+      <span class="co-summary-label">Order Summary</span>
+      <span class="co-summary-count" id="co-summary-count">0 items</span>
+      <span class="co-summary-total" id="co-summary-total">₦0</span>
+      <i class="fas fa-chevron-down co-summary-chevron" id="co-summary-chevron"></i>
+    </div>
+    <div class="co-summary-items" id="co-summary-items" style="display:none"></div>
+  </div>
+
+  <!-- STEP 1 — DELIVERY -->
+  <div class="co-step-panel" id="co-panel-1" style="display:none">
+    <div class="co-section">
+      <h3 class="co-section-title">
+        <i class="fas fa-map-marker-alt"></i> Delivery Details
+      </h3>
+      <div class="co-field-group">
+        <label class="co-label">Full Name</label>
+        <input id="co-name" class="co-input" type="text" placeholder="e.g. Chukwuemeka Obi">
+      </div>
+      <div class="co-field-group">
+        <label class="co-label">Phone Number</label>
+        <input id="co-phone" class="co-input" type="tel" placeholder="08010000000">
+      </div>
+      <div class="co-field-group">
+        <label class="co-label">Street Address</label>
+        <input id="co-street" class="co-input" type="text" placeholder="House No, Street name">
+      </div>
+      <div class="co-field-row">
+        <div class="co-field-group">
+          <label class="co-label">City</label>
+          <input id="co-city" class="co-input" type="text" placeholder="e.g. Lagos">
+        </div>
+        <div class="co-field-group">
+          <label class="co-label">State</label>
+          <input id="co-state" class="co-input" type="text" placeholder="e.g. Lagos State">
+        </div>
+      </div>
+      <div class="co-field-group">
+        <label class="co-label">Landmark <span class="co-optional">(optional)</span></label>
+        <input id="co-landmark" class="co-input" type="text" placeholder="e.g. Opposite the bus stop">
+      </div>
+      <div class="co-field-group">
+        <label class="co-label">Delivery Note <span class="co-optional">(optional)</span></label>
+        <textarea id="co-note" class="co-input co-textarea" placeholder="Any special instructions for delivery?"></textarea>
+      </div>
+      <p class="co-error" id="co-error-1"></p>
+      <button class="co-cta-btn" onclick="validateDelivery()">
+        Continue to Payment <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- STEP 2 — PAYMENT -->
+  <div class="co-step-panel" id="co-panel-2" style="display:none">
+    <div class="co-section">
+      <h3 class="co-section-title">
+        <i class="fas fa-credit-card"></i> Payment Method
+      </h3>
+      <div class="co-payment-options">
+
+        <!-- Card -->
+        <div class="co-pay-option" id="pay-card" onclick="selectPayment('card')">
+          <div class="co-pay-radio"></div>
+          <div class="co-pay-icon"><i class="fas fa-credit-card"></i></div>
+          <div>
+            <div class="co-pay-title">Debit / Credit Card</div>
+            <div class="co-pay-sub">Visa, Mastercard, Verve</div>
+          </div>
+        </div>
+        <div class="co-pay-detail" id="co-detail-card" style="display:none">
+          <div class="co-field-group">
+            <label class="co-label">Card Number</label>
+            <div class="co-card-input-wrap">
+              <input id="co-card-num" class="co-input" type="tel" placeholder="0000 0000 0000 0000" maxlength="19" oninput="formatCardNum(this)">
+              <i class="fas fa-lock co-card-lock"></i>
+            </div>
+          </div>
+          <div class="co-field-row">
+            <div class="co-field-group">
+              <label class="co-label">Expiry</label>
+              <input id="co-card-expiry" class="co-input" type="tel" placeholder="MM / YY" maxlength="7" oninput="formatExpiry(this)">
+            </div>
+            <div class="co-field-group">
+              <label class="co-label">CVV</label>
+              <input id="co-card-cvv" class="co-input" type="password" placeholder="•••" maxlength="4">
+            </div>
+          </div>
+          <div class="co-field-group">
+            <label class="co-label">Name on Card</label>
+            <input id="co-card-name" class="co-input" type="text" placeholder="As it appears on card">
+          </div>
+          <p class="co-secure-note"><i class="fas fa-shield-alt"></i> Your card details are encrypted and secure</p>
+        </div>
+
+        <!-- Bank Transfer -->
+        <div class="co-pay-option" id="pay-transfer" onclick="selectPayment('transfer')">
+          <div class="co-pay-radio"></div>
+          <div class="co-pay-icon"><i class="fas fa-university"></i></div>
+          <div>
+            <div class="co-pay-title">Bank Transfer</div>
+            <div class="co-pay-sub">Transfer directly to our account</div>
+          </div>
+        </div>
+        <div class="co-pay-detail" id="co-detail-transfer" style="display:none">
+          <div class="co-bank-details">
+            <div class="co-bank-title">Transfer To</div>
+            <div class="co-bank-row">
+              <span class="co-bank-label">Bank</span>
+              <span class="co-bank-val">Paystack-Titan</span>
+            </div>
+            <div class="co-bank-row">
+              <span class="co-bank-label">Account Name</span>
+              <span class="co-bank-val">DYNAMICX Apparel</span>
+            </div>
+            <div class="co-bank-row">
+              <span class="co-bank-label">Account Number</span>
+              <span class="co-bank-val co-bank-acct" id="co-bank-acct">8068******</span>
+            </div>
+          </div>
+          <button class="co-copy-btn" onclick="copyAccountNumber()">
+            <i class="fas fa-copy"></i> Copy Account Number
+          </button>
+          <p class="co-bank-note">
+            <strong>Important:</strong> Transfer the exact order total and use your order number as reference. Send your payment receipt to our WhatsApp after transfer so we can confirm and process your order.
+          </p>
+        </div>
+
+        <!-- Pay On Delivery -->
+        <div class="co-pay-option" id="pay-pod" onclick="selectPayment('pod')">
+          <div class="co-pay-radio"></div>
+          <div class="co-pay-icon"><i class="fas fa-truck"></i></div>
+          <div>
+            <div class="co-pay-title">Pay On Delivery</div>
+            <div class="co-pay-sub">Cash or POS at your doorstep</div>
+          </div>
+        </div>
+        <div class="co-pay-detail" id="co-detail-pod" style="display:none">
+          <div class="co-pod-note">
+            <div class="co-pod-icon">🚚</div>
+            <div class="co-pod-text">
+              <strong>Pay on Delivery</strong>
+              Pay with cash when your order arrives. Please ensure you're available to receive and inspect your package at the time of delivery. An extra delivery fee may apply for POD orders.
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <p class="co-error" id="co-error-2"></p>
+      <button class="co-cta-btn" onclick="validatePayment()">
+        Review Order <i class="fas fa-arrow-right"></i>
+      </button>
+      <button class="co-back-step-btn" onclick="goToStep(1)">
+        <i class="fas fa-arrow-left"></i> Back to Delivery
+      </button>
+    </div>
+  </div>
+
+  <!-- STEP 3 — REVIEW -->
+  <div class="co-step-panel" id="co-panel-3" style="display:none">
+    <div class="co-section">
+      <h3 class="co-section-title">
+        <i class="fas fa-clipboard-list"></i> Review Order
+      </h3>
+      <div class="co-review-block">
+        <div class="co-review-block-title">
+          <i class="fas fa-shopping-bag"></i> YOUR ITEMS
+        </div>
+        <div id="co-review-items"></div>
+      </div>
+      <div class="co-review-block">
+        <div class="co-review-block-title">
+          <i class="fas fa-map-marker-alt"></i> DELIVERY ADDRESS
+        </div>
+        <div id="co-review-addr" class="co-review-text"></div>
+        <button class="co-edit-btn" onclick="goToStep(1)">Edit</button>
+      </div>
+      <div class="co-review-block">
+        <div class="co-review-block-title">
+          <i class="fas fa-credit-card"></i> PAYMENT METHOD
+        </div>
+        <div id="co-review-pay-text" class="co-review-text"></div>
+        <button class="co-edit-btn" onclick="goToStep(2)">Edit</button>
+      </div>
+      <div class="co-price-breakdown">
+        <div class="co-price-row">
+          <span class="co-price-label">Subtotal</span>
+          <span class="co-price-val" id="co-price-subtotal">₦0</span>
+        </div>
+        <div class="co-price-row">
+          <span class="co-price-label">Delivery Fee</span>
+          <span class="co-price-val" id="co-price-delivery">₦0</span>
+        </div>
+        <div class="co-price-divider"></div>
+        <div class="co-price-row co-price-total">
+          <span class="co-price-label">Total</span>
+          <span class="co-price-val" id="co-price-total">₦0</span>
+        </div>
+      </div>
+      <p class="co-terms-note">
+        By placing your order you agree to DYNAMICX's <strong>Terms of Use</strong> and <strong>Return Policy</strong>
+      </p>
+      <p class="co-error" id="co-error-3"></p>
+      <button class="co-cta-btn co-place-btn" onclick="placeOrder()">
+        <i class="fas fa-check"></i> Place Order
+      </button>
+      <button class="co-back-step-btn" onclick="goToStep(2)">
+        <i class="fas fa-arrow-left"></i> Back to Payment
+      </button>
+    </div>
+  </div>
+
+  <!-- SUCCESS OVERLAY -->
+  <div class="co-success-overlay" id="co-success" style="display:none">
+    <div class="co-success-card">
+      <div class="co-success-check">
+        <div class="co-check-circle">
+          <i class="fas fa-check co-check-icon"></i>
+        </div>
+      </div>
+      <h2 class="co-success-title">ORDER PLACED</h2>
+      <p class="co-success-sub">Your order has been received. We'll confirm via WhatsApp and get it moving to you ASAP.</p>
+      <div class="co-order-num-wrap">
+        <span class="co-order-num-label">Order Number</span>
+        <span class="co-order-num" id="co-order-num">#DX0000</span>
+      </div>
+      <div class="co-success-actions">
+        <!-- FIX 8: Back to Store goes to project.html -->
+        <a href="indexstore.html" class="co-cta-btn co-success-store-btn">
+          Back to Store
+        </a>
+        <!-- FIX 7: WhatsApp link built dynamically by JS placeOrder() -->
+        <a id="co-whatsapp-link" href="#" target="_blank" class="co-whatsapp-btn">
+          <i class="fab fa-whatsapp"></i> Confirm on WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="project.js"></script>
+</body>
+</html>
