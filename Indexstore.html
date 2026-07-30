@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DYNAMICX Store</title>
+  <link rel="stylesheet" href="project.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="store-page">
+
+  <!-- HEADER -->
+  <header class="board">
+    <div class="label">
+      <img src="image/logo.png">
+      <h1>DYNAMICX</h1>
+    </div>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="🔍 Search products...">
+      <span class="cancel-btn" id="cancelBtn" title="Clear search">&times;</span>
+    </div>
+  </header>
+
+  <!-- CATEGORIES -->
+  <section class="categories">
+    <div class="cat" onclick="showSection('all')">🛍️ All</div>
+    <div class="cat" onclick="showSection('top')">👕 Tops</div>
+    <div class="cat" onclick="showSection('pants')">👖 Pants</div>
+    <div class="cat" onclick="showSection('short')">🩳 Shorts</div>
+    <div class="cat" onclick="showSection('hoodie')">🧥 Hoodie</div>
+  </section>
+
+  <!-- HERO SLIDER -->
+  <section class="slider">
+    <div class="myslide active">
+      <div class="numbertext">1/6</div>
+      <img src="image/fpicture.png">
+      <div class="text">New Drip Collection 🔥<br>Upgrade your style today</div>
+    </div>
+    <div class="myslide">
+      <div class="numbertext">2/6</div>
+      <img src="image/suit15.jpeg">
+      <div class="text">Essential Hoodie</div>
+    </div>
+    <div class="myslide">
+      <div class="numbertext">3/6</div>
+      <img src="image/short10.png">
+      <div class="text">Bloc Flame Ignite Short</div>
+    </div>
+    <div class="myslide">
+      <div class="numbertext">4/6</div>
+      <img src="image/top2.png">
+      <div class="text">Stitch Denim Shirt</div>
+    </div>
+    <div class="myslide">
+      <div class="numbertext">5/6</div>
+      <img src="image/pant14.png">
+      <div class="text">Moss Cargo Jogger</div>
+    </div>
+    <div class="myslide">
+      <div class="numbertext">6/6</div>
+      <img src="image/short6.png">
+      <div class="text">Outlaw Denim Short</div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <div class="dots">
+      <span class="dot active" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+    </div>
+  </section>
+
+  <!-- PROMO BAR -->
+  <div class="promo-bar">
+    <div class="promo-track">
+     ✦ COMPLIMENTARY 🚚DELIVERY ON ORDERS ABOVE ₦50,000 &nbsp;•&nbsp; PREMIUM FABRICS &nbsp;•&nbsp; TIMELESS DESIGNS &nbsp;•&nbsp; THE ART OF MODERN STREETWEAR👕 &nbsp;•&nbsp; CONFIDENCE IN EVERY THREAD &nbsp;•&nbsp; @DYNAMICX® &nbsp;•&nbsp; WEAR THE ENERGY⚡️ &nbsp;•&nbsp; LIVE THE MOMENT!!! &nbsp;&nbsp;✦&nbsp;&nbsp;
+    </div>
+  </div>
+
+  <!-- PRODUCTS -->
+  <div class="mainpage">
+    <section class="products">
+      <div class="product">
+        <img src="image/pant9.png" alt="Pacific jogger" onclick="openPopup('pacific-jogger')">
+        <h2 onclick="openPopup('pacific-jogger')">Pacific jogger</h2>
+        <h4>casual outdoor jogger</h4>
+        <span class="price">₦13,500.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/top10.png" alt="Tactile Shacket" onclick="openPopup('tactile-shacket')">
+        <h2 onclick="openPopup('tactile-shacket')">Tactile Shacket</h2>
+        <h4>Woven texture shirt for men. premium series</h4>
+        <span class="price">₦25,850.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/top20.png" alt="Criterion T-shirt" onclick="openPopup('criterion-t-shirt')">
+        <h2 onclick="openPopup('criterion-t-shirt')">Criterion T-shirt</h2>
+        <h4>outdoor Texture shirt premium line</h4>
+        <span class="price">₦14,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/top7.png" alt="Lightning Static pullover" onclick="openPopup('lightning-static-pullover')">
+        <h2 onclick="openPopup('lightning-static-pullover')">Lightning Static pullover</h2>
+        <h4>Outdoor men knit winter edition</h4>
+        <span class="price">₦12,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/pant2.png" alt="Desert Cargo Pant" onclick="openPopup('desert-cargo-pant')">
+        <h2 onclick="openPopup('desert-cargo-pant')">Desert Cargo Pant</h2>
+        <h4>Multi pocket canvas cargo pant for me. Tactical series</h4>
+        <span class="price">₦15,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/short2.png" alt="Arch Fleece Short" onclick="openPopup('arch-fleece-short')">
+        <h2 onclick="openPopup('arch-fleece-short')">Arch Fleece Short</h2>
+        <h4>Casual outdoor short for fashion. Signature series</h4>
+        <span class="price">₦10,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/pant6.jpeg" alt="Recon Cargo Denim" onclick="openPopup('recon-cargo-denim')">
+        <h2 onclick="openPopup('recon-cargo-denim')">Recon Cargo Denim</h2>
+        <h4>multi pocket cargo jeans. Street series</h4>
+        <span class="price">₦15,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/short10.png" alt="Bloc Flame Ignite Short" onclick="openPopup('bloc-flame-ignite-short')">
+        <h2 onclick="openPopup('bloc-flame-ignite-short')">Bloc Flame Ignite Short</h2>
+        <h4>Outdoor short for fashion. Premium series</h4>
+        <span class="price">₦15,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/short12.png" alt="Velocity Short" onclick="openPopup('velocity-short')">
+        <h2 onclick="openPopup('velocity-short')">Velocity Short</h2>
+        <h4>Curved strip beach short. Active series</h4>
+        <span class="price">₦8,500.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/top2.png" alt="Stitch Denim Shirt" onclick="openPopup('stitch-denim-shirt')">
+        <h2 onclick="openPopup('stitch-denim-shirt')">Stitch Denim Shirt</h2>
+        <h4>Patchwork short sleeve denim shirt. Premium edition</h4>
+        <span class="price">₦22,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/suit12.png" alt="Dynasty Suit" onclick="openPopup('dynasty-suit')">
+        <h2 onclick="openPopup('dynasty-suit')">Dynasty Suit</h2>
+        <h4>luxury dual suit outfit for men. Premium edition</h4>
+        <span class="price">₦25,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/top1.png" alt="Cipher Splash pullover" onclick="openPopup('cipher-splash-pullover')">
+        <h2 onclick="openPopup('cipher-splash-pullover')">Cipher Splash pullover</h2>
+        <h4>Outdoor fit for men winter edition</h4>
+        <span class="price">₦10,500.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/top6.png" alt="Stroke Fleece" onclick="openPopup('stroke-fleece')">
+        <h2 onclick="openPopup('stroke-fleece')">Stroke Fleece</h2>
+        <h4>Outdoor pullover. Winter edition</h4>
+        <span class="price">₦15,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/suit10.png" alt="Patro Dual" onclick="openPopup('patro-dual')">
+        <h2 onclick="openPopup('patro-dual')">Patro Dual</h2>
+        <h4>Outdoor strip block quarter zip + jogger. Core collection</h4>
+        <span class="price">₦15,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/short6.png" alt="Outlaw Denim Short" onclick="openPopup('outlaw-denim-short')">
+        <h2 onclick="openPopup('outlaw-denim-short')">Outlaw Denim Short</h2>
+        <h4>Graphic art print denim short for me. Statement series</h4>
+        <span class="price">₦20,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/pant1.png" alt="Titan Cargo pant" onclick="openPopup('titan-cargo-pant')">
+        <h2 onclick="openPopup('titan-cargo-pant')">Titan Cargo pant</h2>
+        <h4>multi pocket cargo pant for outdoor. Tactical series</h4>
+        <span class="price">₦15,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/pant19.png" alt="Prism Track Pant" onclick="openPopup('prism-track-pant')">
+        <h2 onclick="openPopup('prism-track-pant')">Prism Track Pant</h2>
+        <h4>Outdoor pants for men. Signature line</h4>
+        <span class="price">₦18,500.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/suit2.png" alt="Circuit Suit" onclick="openPopup('circuit-suit')">
+        <h2 onclick="openPopup('circuit-suit')">Circuit Suit</h2>
+        <h4>Outdoor fashion tracksuit. premium edition</h4>
+        <span class="price">₦25,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/top4.png" alt="Denim Splice Set" onclick="openPopup('denim-splice-set')">
+        <h2 onclick="openPopup('denim-splice-set')">Denim Splice Set</h2>
+        <h4>Outdoor splice due for. Core collection</h4>
+        <span class="price">₦17,500.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/suit15.jpeg" alt="Essential Hoodie" onclick="openPopup('essential-hoodie')">
+        <h2 onclick="openPopup('essential-hoodie')">Essential Hoodie</h2>
+        <h4>Diagonal split hoodie for outdoor. Signature line</h4>
+        <span class="price">₦25,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/short3.png" alt="Strike Cargo Short" onclick="openPopup('strike-cargo-short')">
+        <h2 onclick="openPopup('strike-cargo-short')">Strike Cargo Short</h2>
+        <h4>casual outdoor cargo short for men</h4>
+        <span class="price">₦12,500.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/short9.png" alt="Command short" onclick="openPopup('command-short')">
+        <h2 onclick="openPopup('command-short')">Command short</h2>
+        <h4>casual short good for sports and outdoor. Active series</h4>
+        <span class="price">₦15,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/suit5.png" alt="Sovereign Hoodie" onclick="openPopup('sovereign-hoodie')">
+        <h2 onclick="openPopup('sovereign-hoodie')">Sovereign Hoodie</h2>
+        <h4>Signature collection hoodie + jogger men tracksuit</h4>
+        <span class="price">₦25,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/top16.png" alt="Volt Hoodie" onclick="openPopup('volt-hoodie')">
+        <h2 onclick="openPopup('volt-hoodie')">Volt Hoodie</h2>
+        <h4>Neon zip quarter hoodie with sleeve pocket. Active series</h4>
+        <span class="price">₦25,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/top21.png" alt="Bloc Cedar 01 series" onclick="openPopup('bloc-cedar-01')">
+        <h2 onclick="openPopup('bloc-cedar-01')">Bloc Cedar 01 series</h2>
+        <h4>Waffle-knit set for men</h4>
+        <span class="price">₦17,500.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/pant12.png" alt="Sage Waffle pant" onclick="openPopup('sage-waffle-pant')">
+        <h2 onclick="openPopup('sage-waffle-pant')">Sage Waffle pant</h2>
+        <h4>waffle texture wide leg pan. Cole collection</h4>
+        <span class="price">₦13,500.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/pant3.png" alt="Strap Cargo jeans" onclick="openPopup('strap-cargo-jeans')">
+        <h2 onclick="openPopup('strap-cargo-jeans')">Strap Cargo jeans</h2>
+        <h4>Multi pocket strap buckle cargo jeans for men</h4>
+        <span class="price">₦17,500.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/suit6.png" alt="Appex Track" onclick="openPopup('appex-track')">
+        <h2 onclick="openPopup('appex-track')">Appex Track</h2>
+        <h4>Zip jacket + wide trouser outdoor tracksuit</h4>
+        <span class="price">₦20,500.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/suit8.png" alt="Pipe Set-Grove Suit" onclick="openPopup('pipe-set-grove-suit')">
+        <h2 onclick="openPopup('pipe-set-grove-suit')">Pipe Set-Grove Suit</h2>
+        <h4>Quality outdoor tracksuit for men</h4>
+        <span class="price">₦25,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/top11.png" alt="Eclipse crewneck" onclick="openPopup('eclipse-crewneck')">
+        <h2 onclick="openPopup('eclipse-crewneck')">Eclipse crewneck</h2>
+        <h4>Outdoor fit for men. Signature line</h4>
+        <span class="price">₦15,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/pant13.png" alt="Ultra Script Pant" onclick="openPopup('ultra-script-pant')">
+        <h2 onclick="openPopup('ultra-script-pant')">Ultra Script Pant</h2>
+        <h4>Vertical script print pant for men. Premium series</h4>
+        <span class="price">₦25,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/top8.png" alt="Prism Grid sweater" onclick="openPopup('prism-grid-sweater')">
+        <h2 onclick="openPopup('prism-grid-sweater')">Prism Grid sweater</h2>
+        <h4>Geo-patch knit sweater. winter edition</h4>
+        <span class="price">₦16,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/top9.png" alt="Tidal Wave Knit" onclick="openPopup('tidal-wave-knit')">
+        <h2 onclick="openPopup('tidal-wave-knit')">Tidal Wave Knit</h2>
+        <h4>Texture outdoor fit. Winter edition</h4>
+        <span class="price">₦15,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/short4.png" alt="Warfare Short" onclick="openPopup('warfare-short')">
+        <h2 onclick="openPopup('warfare-short')">Warfare Short</h2>
+        <h4>Outdoor cargo short for men. Tactical series</h4>
+        <span class="price">₦10,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/pant20.jpeg" alt="Nomad Cargo Jogger" onclick="openPopup('nomad-cargo-jogger')">
+        <h2 onclick="openPopup('nomad-cargo-jogger')">Nomad Cargo Jogger</h2>
+        <h4>Vertical print cargo jogger for men</h4>
+        <span class="price">₦11,500.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/pant17.png" alt="Bastion Cargo jeans" onclick="openPopup('bastion-cargo-pant')">
+        <h2 onclick="openPopup('bastion-cargo-pant')">Bastion Cargo Pant</h2>
+        <h4>Multi pocket jogger pant. Street series</h4>
+        <span class="price">₦22,300.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/pant14.png" alt="Moss Cargo Jogger" onclick="openPopup('moss-cargo-jogger')">
+        <h2 onclick="openPopup('moss-cargo-jogger')">Moss Cargo Jogger</h2>
+        <h4>Outdoor olive multi pocket cargo jogger for men. Tactical series</h4>
+        <span class="price">₦11,500.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/top13.png" alt="Crimson Suit" onclick="openPopup('crimson-suit')">
+        <h2 onclick="openPopup('crimson-suit')">Crimson Suit</h2>
+        <h4>Jacquard knit wordmark quarter zip for men. Signature line</h4>
+        <span class="price">₦20,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/suit1.jpeg" alt="Axis suit" onclick="openPopup('axis-suit')">
+        <h2 onclick="openPopup('axis-suit')">Axis suit</h2>
+        <h4>Outdoor tracksuit. Signature line</h4>
+        <span class="price">₦14,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/short11.png" alt="Field Cargo Short" onclick="openPopup('field-cargo-short')">
+        <h2 onclick="openPopup('field-cargo-short')">Field Cargo Short</h2>
+        <h4>Multi pocket outdoor cargo short. Tactical series</h4>
+        <span class="price">₦8,500.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/top3.png" alt="Phantom Knit" onclick="openPopup('phantom-knit')">
+        <h2 onclick="openPopup('phantom-knit')">Phantom Knit</h2>
+        <h4>Washed distressed dark</h4>
+        <span class="price">₦25,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/pant8.png" alt="Ops Jogger" onclick="openPopup('ops-jogger')">
+        <h2 onclick="openPopup('ops-jogger')">Ops Jogger</h2>
+        <h4>Multi pocket tactical jogger. Tactical series</h4>
+        <span class="price">₦15,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/pant5.png" alt="Venom Sweatpant" onclick="openPopup('venom-sweatpant')">
+        <h2 onclick="openPopup('venom-sweatpant')">Venom Sweatpant</h2>
+        <h4>Venom flame wide leg pant for men. Premium edition</h4>
+        <span class="price">₦30,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/top19.png" alt="Terrain Fit" onclick="openPopup('terrain-fit')">
+        <h2 onclick="openPopup('terrain-fit')">Terrain Fit</h2>
+        <h4>summer outdoor wears for men</h4>
+        <span class="price">₦23,500.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/top18.png" alt="Gradient Fade knit" onclick="openPopup('gradient-fade-knit')">
+        <h2 onclick="openPopup('gradient-fade-knit')">Gradient Fade knit</h2>
+        <h4>Outdoor pullover crewneck. Dark edit</h4>
+        <span class="price">₦13,800.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/pant10.png" alt="Rover Split Jogger" onclick="openPopup('rover-split-jogger')">
+        <h2 onclick="openPopup('rover-split-jogger')">Rover Split Jogger</h2>
+        <h4>Outdoor strip jogger pant for men</h4>
+        <span class="price">₦25,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/top5.png" alt="Prestige knit" onclick="openPopup('prestige-knit')">
+        <h2 onclick="openPopup('prestige-knit')">Prestige knit</h2>
+        <h4>Texture long sleeve fit for men. Premium line</h4>
+        <span class="price">₦13,500.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/pant16.png" alt="Surplus Cargo pant" onclick="openPopup('surplus-cargo-pant')">
+        <h2 onclick="openPopup('surplus-cargo-pant')">Surplus Cargo pant</h2>
+        <h4>Multi pocket cargo pant for me. Street edition</h4>
+        <span class="price">₦11,500.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/short1.png" alt="Desert Cargo short" onclick="openPopup('desert-cargo-short')">
+        <h2 onclick="openPopup('desert-cargo-short')">Desert Cargo short</h2>
+        <h4>casual short for men</h4>
+        <span class="price">₦10,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/pant15.png" alt="Shadow jogger" onclick="openPopup('shadow-jogger')">
+        <h2 onclick="openPopup('shadow-jogger')">Shadow jogger</h2>
+        <h4>Outdoor wide leg jogger. Street series</h4>
+        <span class="price">₦18,500.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/short5.png" alt="Ranger Utility Short" onclick="openPopup('ranger-utility-short')">
+        <h2 onclick="openPopup('ranger-utility-short')">Ranger Utility Short</h2>
+        <h4>Tactical multi pocket cargo short. Active series</h4>
+        <span class="price">₦10,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/suit4.png" alt="monarch Suit" onclick="openPopup('monarch-suit')">
+        <h2 onclick="openPopup('monarch-suit')">Monarch Suit</h2>
+        <h4>Outdoor fashion tracksuit for men. Premium edition</h4>
+        <span class="price">₦25,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/suit9.jpeg" alt="District Tracksuit-Transit" onclick="openPopup('district-tracksuit-transit')">
+        <h2 onclick="openPopup('district-tracksuit-transit')">District Tracksuit-Transit</h2>
+        <h4>Outdoor tracksuit for men</h4>
+        <span class="price">₦15,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/short7.png" alt="Inferno Short" onclick="openPopup('inferno-short')">
+        <h2 onclick="openPopup('inferno-short')">Inferno Short</h2>
+        <h4>outdoor flame print short for men. Statement series</h4>
+        <span class="price">₦15,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/pant7.png" alt="Sandstorm Cargo pant" onclick="openPopup('sandstorm-cargo-pant')">
+        <h2 onclick="openPopup('sandstorm-cargo-pant')">Sandstorm Cargo pant</h2>
+        <h4>Outdoor multi pocket cargo pant for men</h4>
+        <span class="price">₦15,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/suit13.png" alt="Valence Suit" onclick="openPopup('valence-suit')">
+        <h2 onclick="openPopup('valence-suit')">Valence Suit</h2>
+        <h4>Luxury fashion outdoor track dual for men. Premium edition</h4>
+        <span class="price">₦23,500.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/pant4.png" alt="Arc Pant" onclick="openPopup('arc-pant')">
+        <h2 onclick="openPopup('arc-pant')">Arc Pant</h2>
+        <h4>Outdoor curved piping track pant for men</h4>
+        <span class="price">₦14,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/top17.png" alt="Prestige Quarter Zip suit" onclick="openPopup('prestige-quarter-zip-suit')">
+        <h2 onclick="openPopup('prestige-quarter-zip-suit')">Prestige Quarter Zip suit</h2>
+        <h4>Outdoor winter suit for men</h4>
+        <span class="price">₦17,600.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/top14.png" alt="Haze Crewneck Sweater" onclick="openPopup('haze-crewneck-sweater')">
+        <h2 onclick="openPopup('haze-crewneck-sweater')">Haze Crewneck Sweater</h2>
+        <h4>Acid wash Fleece Sweatshirt. limited edition</h4>
+        <span class="price">₦10,500.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/suit11.png" alt="Blaze Hoodie" onclick="openPopup('blaze-hoodie')">
+        <h2 onclick="openPopup('blaze-hoodie')">Blaze Hoodie</h2>
+        <h4>Neon zip quarter hoodie with sleeve pocket. Active series</h4>
+        <span class="price">₦25,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/short13.jpeg" alt="Edge Short" onclick="openPopup('edge-short')">
+        <h2 onclick="openPopup('edge-short')">Edge Short</h2>
+        <h4>casual street short for men. Core collection</h4>
+        <span class="price">₦7,850.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/pant11.png" alt="Arctic Snow" onclick="openPopup('arctic-snow')">
+        <h2 onclick="openPopup('arctic-snow')">Arctic Snow</h2>
+        <h4>Shell fabric wide leg cargo pant. Core collection</h4>
+        <span class="price">₦27,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/suit3.png" alt="Drift Suit" onclick="openPopup('drift-suit')">
+        <h2 onclick="openPopup('drift-suit')">Drift Suit</h2>
+        <h4>outdoor fashion tracksuit. Premium edition</h4>
+        <span class="price">₦26,700.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/short8.png" alt="Contour short" onclick="openPopup('contour-short')">
+        <h2 onclick="openPopup('contour-short')">Contour short</h2>
+        <h4>outdoor short. Active series</h4>
+        <span class="price">₦10,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/suit7.png" alt="Duality suit" onclick="openPopup('duality-suit')">
+        <h2 onclick="openPopup('duality-suit')">Duality suit</h2>
+        <h4>Quality outdoor men tracksuit. Core collection</h4>
+        <span class="price">₦24,870.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/pant21.png" alt="Sprint Pant" onclick="openPopup('sprint-pant')">
+        <h2 onclick="openPopup('sprint-pant')">Sprint Pant</h2>
+        <h4>Quality outdoor track pants for men. Core collection</h4>
+        <span class="price">₦12,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/top15.png" alt="Harness Hoodie" onclick="openPopup('harness-hoodie')">
+        <h2 onclick="openPopup('harness-hoodie')">Harness Hoodie</h2>
+        <h4>Outdoor strap harness hoodie for men</h4>
+        <span class="price">₦17,000.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/suit14.png" alt="Stripe suit" onclick="openPopup('stripe-suit')">
+        <h2 onclick="openPopup('stripe-suit')">Stripe Suit</h2>
+        <h4>Quality outdoor men tracksuit. Core collection</h4>
+        <span class="price">₦17,500.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/top12.png" alt="Varsity Sweatshirt" onclick="openPopup('varsity-sweatshirt')">
+        <h2 onclick="openPopup('varsity-sweatshirt')">Varsity Sweatshirt</h2>
+        <h4>Panel collar quarter zip sweatshirt for men. Signature line</h4>
+        <span class="price">₦13,500.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="image/pant18.png" alt="Rogue pant" onclick="openPopup('rogue-pant')">
+        <h2 onclick="openPopup('rogue-pant')">Rogue pant</h2>
+        <h4>Utility tactical pant</h4>
+        <span class="price">₦11,500.00</span>
+        <div class="action-row">
+          <div class="heart"><i class="fa-regular fa-heart"></i></div>
+          <button class="add-btn">+Add</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORY SECTIONS -->
+    <section class="top"></section>
+    <section class="pants"></section>
+    <section class="short"></section>
+    <section class="hoodie"></section>
+
+    <!-- BOTTOM NAV -->
+    <nav class="bottom-nav">
+      <a href="index.html">🏠 Home</a>
+      <a href="#" onclick="showPage('cart')">🛒 Cart</a>
+      <a href="#" onclick="showPage('wishlist')">❤️ Wishlist</a>
+      <a href="#" onclick="showPage('profile')">👤 Profile</a>
+    </nav>
+  </div>
+
+  <!-- CART -->
+  <div id="cart-page">
+    <div class="cart-header">
+      <button class="back-btn" onclick="closeCart()">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <h2>🛒 My Cart</h2>
+      <span id="cart-count">0 Items</span>
+    </div>
+    <div id="cart-items"></div>
+    <div class="cart-footer">
+      <h3>Total: ₦<span id="cart-total">0</span></h3>
+      <button class="checkout-btn" onclick="window.location.href='checkout.html'">Checkout</button>
+    </div>
+  </div>
+
+  <!-- WISHLIST -->
+  <div id="wishlist-page">
+    <div class="page-header">
+      <button class="back-btn" onclick="closeWishlist()">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <h2>My Wishlist</h2>
+      <span id="wish-count">0 Items</span>
+    </div>
+    <div id="wish-items"></div>
+    <div class="wish-footer">
+      <button class="clear-all-btn" onclick="clearWishlist()">Clear All</button>
+    </div>
+  </div>
+
+<!-- PROFILE -->
+  <div id="profile-page">
+
+    <!-- AUTH GATE (logged-out) -->
+    <div id="auth-gate">
+      <div class="page-header">
+       <button class="back-btn" onclick="closeProfile()">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+        <span class="subpage-title">MY ACCOUNT</span>
+      </div>
+      <div class="auth-gate-wrap">
+        <div class="auth-logo-wrap">
+          <img src="image/logo.png" class="auth-logo" alt="DYNAMICX">
+          <span class="auth-brand">DYNAMICX</span>
+          <span class="auth-tagline">Wear the Energy. Live The Moment</span>
+        </div>
+        
+        <!-- SIGN UP -->
+          <div id="auth-signup-form">
+          <div id="auth-signup-collapsed">
+            <button class="auth-cta-btn" onclick="expandSignupForm()">SIGN UP</button>
+            <p class="auth-switch">Already have an account? <span class="auth-link" onclick="switchToLogin()">Log In</span></p>
+          </div>
+          <div id="auth-signup-fields" style="display:none; width:100%; flex-direction:column; align-items:center;">
+            <h2 class="auth-form-title">Create Account</h2>
+          <div class="auth-field-group">
+          <input type="text" id="signup-name" class="auth-input" placeholder="Full Name">
+         </div>
+          <div class="auth-field-group">
+            <input type="email" id="signup-email" class="auth-input" placeholder="Email Address">
+          </div>
+          <div class="auth-field-group">
+            <input type="password" id="signup-password" class="auth-input" placeholder="Password" oninput="checkSignupPwStrength(this.value)">
+          <div class="pw-strength-wrap" id="signup-pw-strength-wrap" style="display:none;">
+          <div class="pw-strength-bar">
+          <div class="pw-strength-fill" id="signup-pw-strength-fill"></div>
+          </div>
+          <span class="pw-strength-label" id="signup-pw-strength-label"></span>
+          </div>
+          <div class="pw-requirements">
+            <p class="pw-req-title">PASSWORD MUST CONTAIN:</p>
+            <p class="pw-req" id="signup-req-length"><i class="fas fa-circle req-dot"></i> At least 8 characters</p>
+            <p class="pw-req" id="signup-req-upper"><i class="fas fa-circle req-dot"></i> One uppercase letter</p>
+            <p class="pw-req" id="signup-req-number"><i class="fas fa-circle req-dot"></i> One number</p>
+            <p class="pw-req" id="signup-req-special"><i class="fas fa-circle req-dot"></i> One special character (!@#$...)</p>
+          </div>
+          </div>
+          <div class="auth-field-group">
+            <input type="text" id="signup-referral" class="auth-input" placeholder="Referral Code (optional)">
+          </div>
+
+          <p class="auth-error" id="signup-error"></p>
+          <button class="auth-cta-btn" onclick="doSignUp()">SIGN UP</button>
+           <p class="auth-switch">Already have an account? <span class="auth-link" onclick="switchToLogin()">Log In</span></p>
+          </div>
+          </div>
+        <!-- LOG IN -->
+        <div id="auth-login-form">
+          <h2 class="auth-form-title">Welcome Back</h2>
+          <div class="auth-field-group">
+            <input type="email" id="login-email" class="auth-input" placeholder="Email Address">
+          </div>
+          <div class="auth-field-group">
+            <input type="password" id="login-password" class="auth-input" placeholder="Password">
+          </div>
+          <p class="auth-forgot"><span class="auth-link" onclick="switchToReset()">Forgot password?</span></p>
+          <p class="auth-error" id="login-error"></p>
+          <button class="auth-cta-btn" onclick="doLogin()">LOG IN</button>
+          <p class="auth-switch">Don't have an account? <span class="auth-link" onclick="switchToSignup()">Sign Up</span></p>
+        </div>
+
+        <!-- RESET PASSWORD -->
+        <div id="auth-reset-form">
+          <h2 class="auth-form-title">Reset Password</h2>
+          <div class="auth-field-group">
+            <input type="email" id="reset-email" class="auth-input" placeholder="Email Address">
+          </div>
+          <div class="auth-field-group">
+            <input type="password" id="reset-password" class="auth-input" placeholder="New Password">
+          </div>
+          <div class="auth-field-group">
+            <input type="password" id="reset-password-confirm" class="auth-input" placeholder="Confirm New Password">
+          </div>
+          <p class="auth-error" id="reset-error"></p>
+          <button class="auth-cta-btn" onclick="doResetPassword()">SEND RESET CODE</button>
+          <p class="auth-switch"><span class="auth-link" onclick="switchToLogin()">Return to Sign In</span></p>
+        </div>
+
+        <!-- VERIFICATION CODE SCREEN -->
+        <div id="auth-verification-form" style="display: none;">
+          <h2 class="auth-form-title">Verify Your Account</h2>
+          <p id="verification-message" style="text-align: center; margin-bottom: 20px; color: #666;">A 6-digit code has been sent to your email.</p>
+          <input type="hidden" id="verification-type" value="signup">
+          <div class="auth-field-group">
+            <input type="text" id="verification-code-input" class="auth-input" placeholder="Enter 6-digit code" maxlength="6" inputmode="numeric">
+          </div>
+          <p class="auth-error" id="verification-error"></p>
+          <button class="auth-cta-btn" onclick="if(document.getElementById('verification-type').value==='signup'){doVerifySignupCode()}else{doVerifyResetCode()}">VERIFY CODE</button>
+          <p class="auth-switch"><span class="auth-link" onclick="if(document.getElementById('verification-type').value==='signup'){doResendSignupCode()}else{doResendResetCode()}">Didn't get the code? Resend</span></p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- LOGGED-IN DASHBOARD -->
+    <div id="profile-dashboard" style="display:none;">
+      <div class="page-header">
+        <button class="back-btn" onclick="closeProfile()">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+        <span class="subpage-title">MY PROFILE</span>
+      </div>
+      <div class="profile-body">
+        <div class="avatar">👤</div>
+        <h3 class="profile-name">DYNAMICX Member</h3>
+        <p class="profile-sub">Welcome to your account</p>
+        <div class="profile-stats">
+          <div class="stat-box">
+            <span class="stat-num" id="stat-orders">0</span>
+            <span class="stat-label">Orders</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num" id="stat-wishlist">0</span>
+            <span class="stat-label">Wishlist</span>
+          </div>
+        </div>
+        <div class="profile-menu">
+          <div class="menu-item" onclick="showProfileSub('orders')">📦 My Orders</div>
+          <div class="menu-item" onclick="showProfileSub('address')">📍 Delivery Address</div>
+          <div class="menu-item" onclick="showProfileSub('notifications')">🔔 Notifications</div>
+          <div class="menu-item" onclick="showProfileSub('about')">ℹ️ ABOUT</div>
+          <div class="menu-item" onclick="showProfileSub('settings')">⚙️ Settings</div>
+          <div class="menu-item" onclick="showProfileSub('support')">💬 Customer Support</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCT POPUP -->
+  <div class="pop-page" id="popPage" style="display:none;">
+    <div class="pop-topbar">
+      <button class="back-btn" onclick="closePopup()">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <span class="pop-topbar-title" id="popTopTitle">DYNAMICX</span>
+      <span style="width:36px;"></span>
+    </div>
+    <div class="pop-image-wrap">
+      <div class="pop-series-badge" id="popSeries">SERIES</div>
+      <div class="pop-img-inner">
+        <img class="pop-main-img" id="popImg" src="" alt="Product Image">
+      </div>
+      <button class="pop-zoom-btn" id="popZoomBtn">+</button>
+    </div>
+    <div class="pop-info-wrap">
+      <div class="pop-info-top">
+        <h1 class="pop-name" id="popName">Product Name</h1>
+        <p class="pop-desc" id="popDesc">Product description</p>
+        <div class="pop-price-row">
+          <span class="pop-price" id="popPrice">₦0.00</span>
+          <span class="pop-vat">incl. VAT</span>
+        </div>
+      </div>
+      <div class="pop-section">
+        <div class="pop-section-label">COLOR</div>
+        <div class="pop-colors" id="popColors"></div>
+      </div>
+      <div class="pop-section">
+        <div class="pop-section-label">SIZE</div>
+        <div class="pop-sizes">
+          <button class="pop-size-btn" data-size="M">M</button>
+          <button class="pop-size-btn" data-size="L">L</button>
+          <button class="pop-size-btn" data-size="XL">XL</button>
+          <button class="pop-size-btn" data-size="XXL">XXL</button>
+        </div>
+      </div>
+      <div class="action-row">
+        <div class="heart" id="popHeartBtn" data-liked="false">
+          <i class="fa-regular fa-heart"></i>
+        </div>
+        <button class="add-btn" id="popAddCart">+Add</button>
+      </div>
+    </div>
+    <div class="pop-footer-bar">
+      <span class="pop-footer-brand">DYNAMICX</span>
+      <span class="pop-footer-sub">URBAN STREETWEAR</span>
+    </div>
+  </div>
+
+  <!-- ZOOM OVERLAY -->
+  <div class="pop-zoom-overlay" id="zoomOverlay" onclick="closeZoom()">
+    <img id="zoomImg" src="" alt="">
+  </div>
+
+  <!-- MY ORDERS -->
+  <div id="orders-page">
+    <div class="subpage-header">
+      <button class="back-btn" onclick="showProfileSub(null)"><i class="fas fa-arrow-left"></i></button>
+      <span class="subpage-title">MY ORDERS</span>
+      <span style="width:36px;"></span>
+    </div>
+    <div class="subpage-body">
+      <div class="orders-empty">
+        <div class="orders-empty-icon">📦</div>
+        <h3>No Orders Yet</h3>
+        <p>Your completed orders will appear here once you checkout.</p>
+        <button class="subpage-cta" onclick="showPage('home'); document.querySelector('.products').style.display='grid';">Shop Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- DELIVERY ADDRESS -->
+  <div id="address-page">
+    <div class="subpage-header">
+      <button class="back-btn" onclick="showProfileSub(null)"><i class="fas fa-arrow-left"></i></button>
+      <span class="subpage-title">DELIVERY ADDRESS</span>
+      <span style="width:36px;"></span>
+    </div>
+    <div class="subpage-body">
+      <div class="address-card new-address">
+        <div class="address-icon">📍</div>
+        <div class="address-form">
+          <div class="form-row">
+            <label>Full Name</label>
+            <input type="text" id="addr-name" placeholder="e.g. Chukwuemeka Obi" />
+          </div>
+          <div class="form-row">
+            <label>Phone Number</label>
+            <input type="tel" id="addr-phone" placeholder="e.g. 08012345678" />
+          </div>
+          <div class="form-row">
+            <label>Street Address</label>
+            <input type="text" id="addr-street" placeholder="House No, Street name" />
+          </div>
+          <div class="form-row two-col">
+            <div>
+              <label>City</label>
+              <input type="text" id="addr-city" placeholder="e.g. Lagos" />
+            </div>
+            <div>
+              <label>State</label>
+              <input type="text" id="addr-state" placeholder="e.g. Lagos State" />
+            </div>
+          </div>
+          <div class="form-row">
+            <label>Landmark <span class="optional">(optional)</span></label>
+            <input type="text" id="addr-landmark" placeholder="e.g. Near GTBank" />
+          </div>
+          <button class="subpage-cta full-width" onclick="saveProfileAddress()">Save Address</button>
+          <p class="edit-save-feedback" id="addr-save-feedback"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTIFICATIONS -->
+  <div id="notifications-page">
+    <div class="subpage-header">
+      <button class="back-btn" onclick="showProfileSub(null)"><i class="fas fa-arrow-left"></i></button>
+      <span class="subpage-title">NOTIFICATIONS</span>
+      <span style="width:36px;"></span>
+    </div>
+    <div class="subpage-body">
+      <p class="subpage-section-label">INFORMATION</p>
+      <div class="notif-list">
+        <div class="notif-toggle-row">
+          <div><div class="notif-title">Order Updates</div><div class="notif-sub">Shipping, delivery, and tracking</div></div>
+          <label class="dx-toggle"><input type="checkbox" checked><span class="dx-toggle-slider"></span></label>
+        </div>
+        <div class="notif-toggle-row">
+          <div><div class="notif-title">Restock Alerts</div><div class="notif-sub">Get notified when sold-out items return</div></div>
+          <label class="dx-toggle"><input type="checkbox" checked><span class="dx-toggle-slider"></span></label>
+        </div>
+        <div class="notif-toggle-row">
+          <div><div class="notif-title">New Arrivals</div><div class="notif-sub">Be first to see new drops</div></div>
+          <label class="dx-toggle"><input type="checkbox" checked><span class="dx-toggle-slider"></span></label>
+        </div>
+        <div class="notif-toggle-row">
+          <div><div class="notif-title">Exclusive Drops</div><div class="notif-sub">Early access to limited collections</div></div>
+          <label class="dx-toggle"><input type="checkbox" checked><span class="dx-toggle-slider"></span></label>
+        </div>
+        <div class="notif-toggle-row">
+          <div><div class="notif-title">Promotions &amp; Sales</div><div class="notif-sub">Exclusive discounts and flash deals</div></div>
+          <label class="dx-toggle"><input type="checkbox"><span class="dx-toggle-slider"></span></label>
+        </div>
+        <div class="notif-toggle-row">
+          <div><div class="notif-title">Flash Sales</div><div class="notif-sub">Limited-time discounts and offers</div></div>
+          <label class="dx-toggle"><input type="checkbox" checked><span class="dx-toggle-slider"></span></label>
+        </div>
+        <div class="notif-toggle-row">
+          <div><div class="notif-title">Wishlist Alerts</div><div class="notif-sub">Receive reminders on saved items</div></div>
+          <label class="dx-toggle"><input type="checkbox" checked><span class="dx-toggle-slider"></span></label>
+        </div>
+        <div class="notif-toggle-row">
+          <div><div class="notif-title">Account Security</div><div class="notif-sub">Login alerts and security updates</div></div>
+          <label class="dx-toggle"><input type="checkbox" checked><span class="dx-toggle-slider"></span></label>
+        </div>
+      </div>
+      <button class="pref-save-changes-btn" onclick="saveAllPreferences()">Save changes</button>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div id="about-page">
+    <div class="subpage-header">
+      <button class="back-btn" onclick="showProfileSub(null)"><i class="fas fa-arrow-left"></i></button>
+      <span class="subpage-title">ABOUT</span>
+      <span style="width:36px;"></span>
+    </div>
+    <div class="subpage-body">
+      <div class="about-hero">
+        <img src="image/logo04.png" class="about-logo" alt="DYNAMICX">
+        <h2 class="about-brand">DYNAMICX</h2>
+        <p class="about-tagline">Wear the Energy · Live the Moment · EST. 2024</p>
+      </div>
+      <div class="about-section">
+        <h4 class="about-section-title">OUR STORY</h4>
+        <p class="about-text"><strong>D</strong>ynamicx is a modern clothing brand built for individuals who move with confidence and intention. We create more than apparel — we create a lifestyle rooted in bold expression, urban culture, and everyday movement.<br><br>Our collections are designed to balance simplicity with a strong sense of identity, offering versatile pieces that align with both your style and mindset.<br><br>Every drop reflects our commitment to quality, originality, and attention to detail. Step into the world of DYNAMICX and define your presence.<br><br>Wear the energy. Live the moment.</p>
+      </div>
+      <div class="about-section">
+        <h4 class="about-section-title">OUR MISSION</h4>
+        <p class="about-text">To deliver luxury-grade streetwear at accessible prices — crafted for the everyday man who takes his style seriously. Premium fabrics, timeless silhouettes, modern energy.<br><br>We believe style is not a privilege — it's a language. And every man deserves to speak it fluently. DYNAMICX exists to bridge the gap between high fashion and street culture, creating pieces that carry weight without demanding a fortune.<br><br>We don't follow trends. We build identity. Every collection is a statement — designed with intention, constructed with precision, and worn by those who understand that how you show up matters.<br><br>This is not just fashion. This is DYNAMICX.</p>
+      </div>
+      <div class="about-section">
+        <h4 class="about-section-title">APP VERSION</h4>
+        <p class="about-text">DYNAMICX Store v1.0.0 &nbsp;·&nbsp; &copy; 2024 DYNAMICX Apparel. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SETTINGS -->
+  <div id="settings-page">
+    <div class="subpage-header">
+      <button class="back-btn" onclick="showProfileSub(null)"><i class="fas fa-arrow-left"></i></button>
+      <span class="subpage-title">SETTINGS</span>
+      <span style="width:36px;"></span>
+    </div>
+    <div class="subpage-body">
+      <p class="subpage-section-label">ACCOUNT</p>
+      <div class="settings-list">
+        <div class="settings-row" onclick="openEditProfile()">
+          <span>✏️ Edit Profile</span><span class="settings-arrow">›</span>
+        </div>
+        <div class="settings-row" onclick="openChangePassword()">
+          <span>🔒 Change Password</span><span class="settings-arrow">›</span>
+        </div>
+        <div class="settings-row" onclick="showProfileSub('preferences')">
+          <span>🔔 Preferences</span><span class="settings-arrow">›</span>
+        </div>
+      </div>
+      <p class="subpage-section-label" style="margin-top:24px;">APP</p>
+      <div class="settings-list">
+        <div class="settings-row" onclick="showProfileSub('referrals')">
+          <span>🎁 Referrals</span><span class="settings-arrow">›</span>
+        </div>
+        <div class="settings-row">
+          <span>🔔 Push Notifications</span>
+          <label class="dx-toggle"><input type="checkbox" checked><span class="dx-toggle-slider"></span></label>
+        </div>
+        <div class="settings-row" onclick="showProfileSub('legal')">
+          <span>⚖️ Legal</span><span class="settings-arrow">›</span>
+        </div>
+      </div>
+      <p class="subpage-section-label" style="margin-top:24px;">DANGER ZONE</p>
+      <div class="settings-list">
+        <div class="settings-row danger" onclick="confirmLogout()">
+          <span>🚪 Log Out</span><span class="settings-arrow">›</span>
+        </div>
+        <div class="settings-row danger" onclick="confirmDeleteAccount()">
+          <span>❌ Delete Account</span><span class="settings-arrow">›</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CUSTOMER SUPPORT : social links use JS functions -->
+  <div id="support-page">
+    <div class="subpage-header">
+      <button class="back-btn" onclick="showProfileSub(null)"><i class="fas fa-arrow-left"></i></button>
+      <span class="subpage-title">GET HELP</span>
+      <span style="width:36px;"></span>
+    </div>
+    <div class="subpage-body" style="padding:0;">
+      <div class="gethelp-list">
+        <div class="gethelp-row" onclick="openWhatsApp('Hi DYNAMICX, I need help with my order')">
+          <span class="gethelp-icon"><i class="fab fa-whatsapp"></i></span>
+          <span class="gethelp-label">WhatsApp</span>
+          <span class="gethelp-arrow">›</span>
+        </div>
+        <div class="gethelp-row" onclick="openEmail('Customer Support - DYNAMICX')">
+          <span class="gethelp-icon"><i class="fas fa-envelope"></i></span>
+          <span class="gethelp-label">Email</span>
+          <span class="gethelp-arrow">›</span>
+        </div>
+        <div class="gethelp-row" onclick="openXTwitter()">
+          <span class="gethelp-icon"><i class="fab fa-x-twitter"></i></span>
+          <span class="gethelp-label">X (Twitter)</span>
+          <span class="gethelp-arrow">›</span>
+        </div>
+        <div class="gethelp-row" onclick="openInstagram()">
+          <span class="gethelp-icon"><i class="fab fa-instagram"></i></span>
+          <span class="gethelp-label">Instagram</span>
+          <span class="gethelp-arrow">›</span>
+        </div>
+      </div>
+      <div style="padding: 0 16px 20px;">
+        <p class="subpage-section-label" style="margin-top:24px;">FAQ</p>
+        <div class="faq-list">
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-q">How long does delivery take? <span class="faq-arrow">›</span></div>
+            <div class="faq-a">Delivery usually takes place within 7-14 working days, depending on your location and product availability.</div>
+          </div>
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-q">Can I return or exchange an item? <span class="faq-arrow">›</span></div>
+            <div class="faq-a">Yes! We accept returns within 7 days of delivery if the item is unworn and in original condition. Contact support to initiate a return.</div>
+          </div>
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-q">How do I know my size? <span class="faq-arrow">›</span></div>
+            <div class="faq-a">Our sizes run true to standard Nigerian sizing. M fits chest 38–40", L fits 40–42", XL fits 42–44", XXL fits 44–46". When in doubt, size up.</div>
+          </div>
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-q">How do I place an order? <span class="faq-arrow">›</span></div>
+            <div class="faq-a">Browse through our categories, add items to your cart, and proceed to checkout to complete your order.</div>
+          </div>
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-q">Do I need an account to shop? <span class="faq-arrow">›</span></div>
+            <div class="faq-a">You can browse freely, but creating an account helps you track orders, save favorites, and enjoy faster checkout.</div>
+          </div>
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-q">Can I edit or cancel my order after placing it? <span class="faq-arrow">›</span></div>
+            <div class="faq-a">Orders can be edited or canceled within a short time after placement. Please contact our support team immediately for assistance.</div>
+          </div>
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-q">What if an item is out of stock? <span class="faq-arrow">›</span></div>
+            <div class="faq-a">Click "Notify Me" to get an alert when it's back, or browse similar products in the same category.</div>
+          </div>
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-q">How can I track my order? <span class="faq-arrow">›</span></div>
+            <div class="faq-a">After checkout, you'll receive a tracking link via email or SMS to monitor your order in real time.</div>
+          </div>
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-q">What are your delivery fees? <span class="faq-arrow">›</span></div>
+            <div class="faq-a">Delivery fees vary by location and order size. The exact amount will be shown at checkout before payment.</div>
+          </div>
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-q">What payment methods do you accept? <span class="faq-arrow">›</span></div>
+            <div class="faq-a">We accept credit/debit cards and mobile payments.</div>
+          </div>
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-q">What should I do if my payment fails? <span class="faq-arrow">›</span></div>
+            <div class="faq-a">Try again using a different payment method or contact your bank. If the issue continues, reach out to our support team.</div>
+          </div>
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-q">How do I create or update my account? <span class="faq-arrow">›</span></div>
+            <div class="faq-a">Create an account on the sign-up page and manage your details anytime from your profile settings.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EDIT PROFILE -->
+  <div id="edit-profile-page">
+    <div class="subpage-header">
+      <button class="back-btn" onclick="showProfileSub('settings')"><i class="fas fa-arrow-left"></i></button>
+      <span class="subpage-title">EDIT PROFILE</span>
+      <span style="width:36px;"></span>
+    </div>
+    <div class="subpage-body">
+      <div class="edit-avatar-wrap">
+        <div class="edit-avatar-ring">
+          <div class="edit-avatar-img" id="edit-avatar-preview">
+            <img id="edit-avatar-img-tag" src="" alt="" style="display:none;width:100%;height:100%;object-fit:cover;border-radius:50%;">
+            <span id="edit-avatar-fallback" class="edit-avatar-icon">👤</span>
+          </div>
+          <button class="edit-avatar-btn" onclick="document.getElementById('avatar-file-input').click()">
+            <i class="fas fa-camera"></i>
+          </button>
+        </div>
+        <input type="file" id="avatar-file-input" accept="image/*" style="display:none;" onchange="handleAvatarUpload(event)">
+        <p class="edit-avatar-hint">Tap camera to change photo</p>
+      </div>
+      <div class="edit-field-group">
+        <label class="edit-field-label">DISPLAY NAME</label>
+        <input type="text" id="edit-name-input" class="edit-field-input" placeholder="Enter your name" maxlength="30">
+      </div>
+      <button class="edit-save-btn" onclick="saveProfileEdits()">SAVE CHANGES</button>
+      <p class="edit-save-feedback" id="edit-save-feedback"></p>
+    </div>
+  </div>
+
+  <!-- CHANGE PASSWORD -->
+  <div id="change-password-page">
+    <div class="subpage-header">
+      <button class="back-btn" onclick="showProfileSub('settings')"><i class="fas fa-arrow-left"></i></button>
+      <span class="subpage-title">CHANGE PASSWORD</span>
+      <span style="width:36px;"></span>
+    </div>
+    <div class="subpage-body">
+      <div class="chpw-icon-wrap">
+        <div class="chpw-icon">🔒</div>
+        <p class="chpw-subtitle">Keep your account secure by using a strong password</p>
+      </div>
+      <div class="edit-field-group">
+        <label class="edit-field-label">CURRENT PASSWORD</label>
+        <div class="pw-input-wrap">
+          <input type="password" id="pw-current" class="edit-field-input pw-input" placeholder="Enter current password">
+          <button class="pw-eye" onclick="togglePw('pw-current', this)"><i class="fas fa-eye"></i></button>
+        </div>
+      </div>
+      <div class="edit-field-group">
+        <label class="edit-field-label">NEW PASSWORD</label>
+        <div class="pw-input-wrap">
+          <input type="password" id="pw-new" class="edit-field-input pw-input" placeholder="Enter new password" oninput="checkPwStrength(this.value)">
+          <button class="pw-eye" onclick="togglePw('pw-new', this)"><i class="fas fa-eye"></i></button>
+        </div>
+        <div class="pw-strength-wrap" id="pw-strength-wrap" style="display:none;">
+          <div class="pw-strength-bar">
+            <div class="pw-strength-fill" id="pw-strength-fill"></div>
+          </div>
+          <span class="pw-strength-label" id="pw-strength-label"></span>
+        </div>
+      </div>
+      <div class="edit-field-group">
+        <label class="edit-field-label">CONFIRM NEW PASSWORD</label>
+        <div class="pw-input-wrap">
+          <input type="password" id="pw-confirm" class="edit-field-input pw-input" placeholder="Re-enter new password">
+          <button class="pw-eye" onclick="togglePw('pw-confirm', this)"><i class="fas fa-eye"></i></button>
+        </div>
+      </div>
+      <div class="pw-requirements">
+        <p class="pw-req-title">PASSWORD MUST CONTAIN:</p>
+        <p class="pw-req" id="req-length"><i class="fas fa-circle req-dot"></i> At least 8 characters</p>
+        <p class="pw-req" id="req-upper"><i class="fas fa-circle req-dot"></i> One uppercase letter</p>
+        <p class="pw-req" id="req-number"><i class="fas fa-circle req-dot"></i> One number</p>
+        <p class="pw-req" id="req-special"><i class="fas fa-circle req-dot"></i> One special character (!@#$...)</p>
+      </div>
+      <button class="edit-save-btn" onclick="saveNewPassword()">UPDATE PASSWORD</button>
+      <p class="edit-save-feedback" id="pw-save-feedback"></p>
+    </div>
+  </div>
+
+  <!-- PREFERENCES PAGE -->
+  <div id="preferences-page">
+    <div class="subpage-header">
+      <button class="back-btn" onclick="showProfileSub('settings')"><i class="fas fa-arrow-left"></i></button>
+      <span class="subpage-title">PREFERENCES</span>
+      <span style="width:36px;"></span>
+    </div>
+    <div class="pref-channel-card" id="sms-pref-card">
+      <div class="pref-channel-header" onclick="togglePrefChannel('sms')">
+        <div>
+          <div class="pref-channel-title">SMS Notifications</div>
+          <div class="pref-channel-sub">Preferred method for notification</div>
+        </div>
+        <label class="dx-toggle" onclick="event.stopPropagation()">
+          <input type="checkbox" id="sms-toggle" onchange="onPrefToggle('sms', this.checked)">
+          <span class="dx-toggle-slider"></span>
+        </label>
+      </div>
+      <div class="pref-input-area" id="sms-input-area" style="display:none;">
+        <div class="form-row" style="margin-top:10px;">
+          <label>Phone Number</label>
+          <input type="tel" id="sms-phone-input" class="pref-contact-input" placeholder="e.g. 08012345678">
+        </div>
+        <button class="pref-save-btn" onclick="savePrefContact('sms')">Done</button>
+        <p class="pref-save-feedback" id="sms-feedback"></p>
+      </div>
+    </div>
+    <div class="pref-channel-card" id="email-pref-card">
+      <div class="pref-channel-header" onclick="togglePrefChannel('email')">
+        <div>
+          <div class="pref-channel-title">Email Notifications</div>
+          <div class="pref-channel-sub">Preferred method for notification</div>
+        </div>
+        <label class="dx-toggle" onclick="event.stopPropagation()">
+          <input type="checkbox" id="email-toggle" onchange="onPrefToggle('email', this.checked)">
+          <span class="dx-toggle-slider"></span>
+        </label>
+      </div>
+      <div class="pref-input-area" id="email-input-area" style="display:none;">
+        <div class="form-row" style="margin-top:10px;">
+          <label>Email Address</label>
+          <input type="email" id="pref-email-field" class="pref-contact-input" placeholder="e.g. yourname@gmail.com">
+        </div>
+        <button class="pref-save-btn" onclick="savePrefContact('email')">Done</button>
+        <p class="pref-save-feedback" id="email-pref-fb"></p>
+      </div>
+    </div>
+    <button class="pref-save-changes-btn" onclick="saveAllPreferences()">Save changes</button>
+  </div>
+
+  <!-- REFERRALS PAGE -->
+  <div id="referrals-page">
+    <div class="subpage-header">
+      <button class="back-btn" onclick="showProfileSub('settings')"><i class="fas fa-arrow-left"></i></button>
+      <span class="subpage-title">REFERRALS</span>
+      <span style="width:36px;"></span>
+    </div>
+    <div class="referral-hero">
+      <div class="referral-gift-emoji">🎁</div>
+      <div class="referral-confetti" aria-hidden="true">
+        <span>🎊</span><span>✨</span><span>🎉</span><span>⭐</span><span>🎊</span>
+      </div>
+      <div class="referral-code-box">
+        <span class="referral-code-text" id="referral-code-display">DX-LOADING</span>
+        <button class="referral-code-btn" onclick="copyReferralCode()" title="Copy code"><i class="fas fa-copy"></i></button>
+        <span class="referral-divider">|</span>
+        <button class="referral-code-btn" onclick="shareReferralCode()" title="Share"><i class="fas fa-share-nodes"></i></button>
+      </div>
+    </div>
+    <div class="referral-body">
+      <div class="referral-section-title">Invite a friend and get</div>
+      <div class="referral-rewards">
+        <div class="referral-reward-row">
+          <div class="referral-dot-wrap"><div class="referral-dot"></div><div class="referral-dot-line"></div></div>
+          <div class="referral-reward-info">
+            <div class="referral-reward-amount">₦2000</div>
+            <div class="referral-reward-sub">On their first order</div>
+          </div>
+        </div>
+      </div>
+      <div class="referral-section-title" style="margin-top:20px;">Your friend gets</div>
+      <div class="referral-rewards">
+        <div class="referral-reward-row">
+          <div class="referral-dot-wrap"><div class="referral-dot"></div><div class="referral-dot-line"></div></div>
+          <div class="referral-reward-info">
+            <div class="referral-reward-amount">₦1000</div>
+            <div class="referral-reward-sub">On their first order</div>
+          </div>
+        </div>
+      </div>
+      <div class="referral-section-title" style="margin-top:20px;">Referral Milestone Reward
+      </div>
+      <div class="referral-rewards">
+        <div class="referral-reward-row">
+         <div class="referral-dot-wrap">
+      <div class="referral-dot"></div>
+      </div>
+      <div class="referral-reward-info">
+      <div class="referral-reward-amount">30% OFF</div>
+      <div class="referral-reward-sub">
+        Refer 20 friends who complete their first order and earn 30% off your next purchase.
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="referral-divider-line"></div>
+      <div class="referral-history-row" id="referral-history-row" onclick="toggleReferralHistory()">
+        <span class="referral-history-label">VIEW REFERRAL HISTORY</span>
+        <span class="referral-history-arrow" id="referral-history-arrow">›</span>
+      </div>
+      <div class="referral-history-content" id="referral-history-content">
+        <div class="referral-history-empty">No referrals yet</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEGAL PAGE -->
+  <div id="legal-page">
+    <div class="subpage-header">
+      <button class="back-btn" onclick="showProfileSub('settings')"><i class="fas fa-arrow-left"></i></button>
+      <span class="subpage-title">LEGAL</span>
+      <span style="width:36px;"></span>
+    </div>
+    <div class="subpage-body">
+      <div class="settings-list">
+        <div class="settings-row" onclick="showProfileSub('privacy-policy')">
+          <span>🔏 Privacy Policy</span><span class="settings-arrow">›</span>
+        </div>
+        <div class="settings-row" onclick="showProfileSub('terms-of-use')">
+          <span>📋 Terms of Use</span><span class="settings-arrow">›</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRIVACY POLICY -->
+  <div id="privacy-policy-page">
+    <div class="subpage-header">
+      <button class="back-btn" onclick="showProfileSub('legal')"><i class="fas fa-arrow-left"></i></button>
+      <span class="subpage-title">PRIVACY POLICY</span>
+      <span style="width:36px;"></span>
+    </div>
+    <div class="subpage-body">
+      <div class="legal-doc">
+        <p class="legal-date">Last updated: January 2026</p>
+        <div class="legal-section"><h4 class="legal-section-title">1. INTRODUCTION</h4><p class="legal-text">DYNAMICX exists to give you gear that hits different — and your data deserves the same level of respect. This Privacy Policy breaks down what we collect, why we collect it, how it's protected, and what control you have over it when you use the DYNAMICX app.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">2. NOTIFICATION OF CHANGES TO THIS POLICY</h4><p class="legal-text">We review this Privacy Policy regularly to keep it aligned with applicable data protection laws across every market we serve — including the Nigeria Data Protection Act (NDPA) 2023. As DYNAMICX grows, adds features, and adapts to new technology, our data practices may evolve. When that happens, we'll update this Policy and post the revised version here, with a new "Last updated" date.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">3. INFORMATION WE COLLECT</h4><p class="legal-text">We keep collection lean — only what's needed to run your account and get your order to you:<br><br><strong>Account Information:</strong> Name, email, and password (stored encrypted).<br><br><strong>Contact Details:</strong> Phone number and delivery address, entered at checkout or saved to your profile.<br><br><strong>Order Data:</strong> Items purchased, sizes, colours, quantities, and transaction amounts.<br><br><strong>App Usage Data:</strong> Pages viewed, cart and wishlist activity, and in-app actions. This is stored locally on your device via localStorage/sessionStorage and is not transmitted to external servers at this time.<br><br><strong>Notification Preferences:</strong> Whether you've opted into SMS or email updates.<br><br><strong>Payment Information:</strong> Payments are processed directly by our third-party payment provider — DYNAMICX does not collect or store your card details.<br><br><strong>Device Information:</strong> Where relevant, basic device/browser type, used only to keep the app running smoothly.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">4. COOKIES &amp; LOCAL STORAGE</h4><p class="legal-text">We currently use localStorage and sessionStorage — not cookies — to remember your cart, wishlist, account preferences, and notification settings between visits. This data stays on your device.<br><br>If we introduce cookies or similar tracking technologies in future (for example, for analytics), we'll update this Policy and request your consent where required by law. No third-party advertising trackers are used today.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">5. HOW WE USE YOUR INFORMATION</h4><p class="legal-text">Your information helps us:<br><br>• Process and fulfil your orders<br>• Send order confirmations, shipping updates, and delivery alerts<br>• Personalise your experience on the app<br>• Send promos and drop announcements, if you've opted in<br>• Understand how the app is used so we can improve it<br>• Authenticate your account and verify your identity<br>• Detect and prevent fraud or misuse<br>• Provide customer support and respond to enquiries<br>• Process payments for your orders<br>• Comply with applicable Nigerian and international laws<br>• For any other purpose with your consent</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">6. CONSENT</h4><p class="legal-text">By creating an account and using the DYNAMICX app, you consent to the collection and processing of your personal information — including your name, contact details, order history, and related information — for the purposes described in this Policy.<br><br>If you wish to opt out of any service or withdraw your consent, contact us at DYNAMICX@gmail.com or via WhatsApp at +234 806 836 0427. If you're not comfortable with how we process your data, please don't use the app.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">7. LAWFUL BASIS FOR PROCESSING DATA</h4><p class="legal-text">We process your data based on: your consent, the need to fulfil our contractual obligations to you (such as delivering your order), compliance with our legal obligations, and our legitimate business interests. Where processing relies on your consent, you may withdraw it at any time.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">8. HOW WE COLLECT YOUR INFORMATION</h4><p class="legal-text">We collect information directly from you — when you create an account, place an order, contact customer support, or otherwise interact with the app. We do not currently combine this with information from third-party sources, but if that changes, this Policy will be updated.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">9. THIRD-PARTY SERVICES &amp; LINKS</h4><p class="legal-text">The app may link to or use third-party services (such as our payment processor or social media platforms). These services have their own privacy policies, and we encourage you to review them. DYNAMICX is not responsible for the content, practices, or data handling of third-party services.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">10. DELIVERY ADDRESS &amp; LOCATION INFORMATION</h4><p class="legal-text">We use the delivery address you provide to fulfil your order and estimate shipping. We do not continuously track your real-time location. If we introduce location-based features (such as automatic address detection) in future, we'll ask for your permission and explain how that information is used.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">11. COMMUNICATION WITH US</h4><p class="legal-text">When you contact us via email, WhatsApp, or in-app support, we may keep records of that communication for quality assurance, dispute resolution, fraud prevention, and to improve our customer service.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">12. SURVEYS</h4><p class="legal-text">We may occasionally invite you to complete a survey to help us improve DYNAMICX. Participation is optional, and any information you share — including demographic details, if requested — is used only as described in this Policy.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">13. DISCLOSURE OF YOUR INFORMATION</h4><p class="legal-text">DYNAMICX will not sell or rent your personal information. We may share it only with:<br><br>• Delivery partners, solely to fulfil your order<br>• Payment processors, to complete your transaction<br>• Service providers who support our operations (e.g. hosting, IT support), bound by confidentiality<br>• Law enforcement or regulatory authorities, where required by law<br>• A successor entity, in the event of a business transfer, restructuring, or acquisition<br><br>Any third party we work with is required to handle your data in line with applicable privacy laws.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">14. STORAGE &amp; SECURITY</h4><p class="legal-text">Your account data is currently stored on your device using browser localStorage — we don't yet operate our own servers. We follow industry-standard security practices for the systems we do use.<br><br>When we move to server-side storage, that infrastructure will be protected with encryption, access controls, and secure protocols (including HTTPS/SSL) from day one, and this Policy will be updated to reflect where and how data is stored.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">15. RETENTION PERIOD</h4><p class="legal-text">We retain your account information for as long as your account remains active. Order and transaction records may be retained for longer where needed to comply with applicable Nigerian tax, accounting, or consumer protection laws. When information is no longer needed, we take reasonable steps to delete or anonymise it.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">16. DIRECT MARKETING</h4><p class="legal-text">If you've opted in, we may send you promotional messages about new drops, restocks, and offers via email, SMS, or WhatsApp. You can opt out at any time by using the unsubscribe link, adjusting your notification settings in the app, or contacting us directly — you'll still receive non-promotional messages like order confirmations.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">17. YOUR RIGHTS</h4><p class="legal-text">Under applicable data protection law, including the NDPA 2023, you have the right to:<br><br>• Confirm what personal data we hold about you<br>• Access a copy of that data<br>• Correct inaccurate or outdated information<br>• Request deletion or anonymisation of your data, where applicable<br>• Request data portability, where applicable<br>• Withdraw consent for processing at any time<br>• Lodge a complaint with the Nigeria Data Protection Commission (NDPC)<br><br>To exercise any of these rights, contact us at DYNAMICX@gmail.com or via WhatsApp at +234 806 836 0427. We may ask you to verify your identity before processing certain requests.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">18. CHILDREN'S PRIVACY</h4><p class="legal-text">DYNAMICX is not directed to individuals under the age of 13, and we do not knowingly collect personal data from children. If you believe a child has provided us with personal information, please contact us so we can take appropriate action.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">19. PRIVACY CONTACT</h4><p class="legal-text">For any questions, concerns, or requests relating to this Privacy Policy or how your data is handled, reach out to us at DYNAMICX@gmail.com. As DYNAMICX grows, we'll formally designate a Data Protection Officer in line with NDPA 2023 requirements and update this section accordingly.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">20. GOVERNING LAW</h4><p class="legal-text">This Policy is governed by the laws of the Federal Republic of Nigeria. Where any provision conflicts with applicable law, the law will take precedence, and the rest of this Policy remains in effect.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">21. CONTACT US</h4><p class="legal-text">Reach out anytime:<br><br>📧 DYNAMICX@gmail.com<br>📱 +234 806 836 0427 (WhatsApp)<br>📸 @DYNAMICX on Instagram &amp; X<br><br>Last updated: January 2026</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TERMS OF USE -->
+  <div id="terms-of-use-page">
+    <div class="subpage-header">
+      <button class="back-btn" onclick="showProfileSub('legal')"><i class="fas fa-arrow-left"></i></button>
+      <span class="subpage-title">TERMS OF USE</span>
+      <span style="width:36px;"></span>
+    </div>
+    <div class="subpage-body">
+      <div class="legal-doc">
+        <p class="legal-date">Last updated: January 2025</p>
+        <div class="legal-section"><h4 class="legal-section-title">1. GENERAL TERMS</h4><p class="legal-text">1.1. These Terms of Use govern your access to and use of the DYNAMICX website and mobile application (collectively, the "Platform") and set out the legally binding terms on which you may browse, register, and shop with us.<br><br>1.2. By using the Platform in any way, you confirm that you accept these Terms and agree to be bound by them.<br><br>1.3. Breach of these Terms may result in your access to the Platform being restricted, suspended, or withdrawn.<br><br>1.4. We may update these Terms from time to time. Continued use of the Platform after changes are posted means you accept the revised Terms.<br><br>1.5. If you do not agree to these Terms, please do not access or use the Platform.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">2. ABOUT DYNAMICX</h4><p class="legal-text">2.1. DYNAMICX is a streetwear brand. Every product listed on the Platform is designed, sourced, and sold directly by DYNAMICX — we are not a marketplace and do not list third-party sellers.<br><br>2.2. As the seller of record, DYNAMICX is responsible for the listing, fulfilment, and quality of every item purchased through the Platform.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">3. ACCESSING THE PLATFORM</h4><p class="legal-text">3.1. We don't guarantee that the Platform will always be available, uninterrupted, or fault-free, and we won't be liable if it's unavailable at any time.<br><br>3.2. We don't guarantee the Platform or its content will be entirely free of errors or omissions.<br><br>3.3. You're responsible for arranging whatever access you need to use the Platform, and for ensuring anyone using your account complies with these Terms.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">4. ACCOUNT REGISTRATION</h4><p class="legal-text">4.1. Our Services are available only to individuals aged 18 and over who can form legally binding contracts under applicable law. By registering, you confirm you meet this requirement and that your account information is accurate.<br><br>4.2. To create an account, you'll provide your name, email address, phone number, and a password. By tapping "Continue" or "Sign Up," you agree to these Terms and our Privacy Policy.<br><br>4.3. You're responsible for keeping your login details confidential and for all activity on your account. If you suspect unauthorised access, contact us immediately at DYNAMICX@gmail.com.<br><br>4.4. You agree to keep your account information accurate and up to date, and accept responsibility for any consequences arising from outdated or inaccurate information.<br><br>4.5. We may require you to change your password if we suspect a security issue, and may suspend or delete accounts that fail to comply.<br><br>4.6. You may close your account at any time. Your details will be handled in line with our Privacy Policy and retention practices.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">5. PAYMENT</h4><p class="legal-text">5.1. Payments on the Platform are processed by a third-party payment processor, who provides the gateway for online transactions.<br><br>5.2. You may pay by debit/credit card, bank transfer, or any other payment method made available at checkout.<br><br>5.3. The payment processor is solely responsible for processing your payment transaction.<br><br>5.4. All prices are displayed in Naira (₦) and are inclusive of applicable taxes unless stated otherwise.<br><br>5.5. Delivery fees, where applicable, are shown at checkout before you confirm your order.<br><br>5.6. The total price shown at checkout is due immediately upon placing your order.<br><br>5.7. If a price changes after you've placed an order but before it's confirmed, we'll notify you and you'll be asked to accept the new price before proceeding.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">6. PRICING &amp; PRODUCT AVAILABILITY</h4><p class="legal-text">6.1. We make every effort to ensure prices, descriptions, and product images are accurate, but errors may occasionally occur — if we discover a pricing error after you've ordered, we'll contact you before proceeding.<br><br>6.2. Product images are for illustrative purposes. Actual colours may vary slightly depending on your device's display.<br><br>6.3. All products are subject to availability. If an item you've ordered is out of stock, we'll notify you and offer a refund, exchange, or alternative.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">7. PLACING ORDERS</h4><p class="legal-text">7.1. The order page allows you to review your order — including size, colour, and quantity — and make corrections before confirming.<br><br>7.2. Confirming your order is an offer to purchase the selected items. Orders may be cancelled free of charge before they enter processing; once processing begins, cancellation may no longer be possible.<br><br>7.3. You can view your order history and payment summary at any time in your account.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">8. DELIVERY</h4><p class="legal-text">8.1. Orders are delivered by DYNAMICX directly or via our delivery partners.<br><br>8.2. It's your responsibility to ensure your delivery address and phone number are accurate and up to date at checkout.<br><br>8.3. If you don't receive your order, contact us promptly so we can investigate — where appropriate, we'll arrange redelivery or a refund.<br><br>8.4. Please inspect your order on delivery. If an item is incorrect, damaged, or missing, contact us within [X days] so we can resolve it.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">9. RETURNS, EXCHANGES &amp; REFUNDS</h4><p class="legal-text">9.1. We want you to love your gear. If something's not right, you may request a return or exchange within [7 days] of delivery, provided the item is unworn, unwashed, and in its original condition with tags attached.<br><br>9.2. Items marked as final sale, or purchased at a discount during specific promotions, may not be eligible for return — this will be made clear at the time of purchase.<br><br>9.3. To start a return or exchange, contact us at DYNAMICX@gmail.com or via WhatsApp with your order number and reason for the request.<br><br>9.4. Where an item is defective or incorrect due to our error, we'll cover return shipping. For other returns/exchanges (e.g. size preference), return shipping costs may be the customer's responsibility.<br><br>9.5. Approved refunds will be issued to your original payment method or as store credit, within a reasonable processing time after we receive and inspect the returned item.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">10. PROMOTIONAL CODES</h4><p class="legal-text">10.1. DYNAMICX may, at its discretion, issue promo codes for discounts or other benefits, subject to any additional terms specified per code.<br><br>10.2. Promo codes must be used as intended and lawfully. They may not be duplicated, sold, transferred, or publicly shared, are not valid for cash, may expire, and may be disabled at any time without liability to DYNAMICX.<br><br>10.3. We reserve the right to withhold or reverse any benefit obtained through a promo code if we believe it was used in error, fraudulently, or in violation of its terms.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">11. INTELLECTUAL PROPERTY</h4><p class="legal-text">11.1. DYNAMICX owns all intellectual property rights in the Platform and its content — including our name, logo, designs, graphics, and product imagery — protected under applicable Nigerian and international law.<br><br>11.2. You may access and use this content for personal, non-commercial use only. Reproducing, distributing, modifying, reverse-engineering, or otherwise exploiting any part of the Platform without our written permission is prohibited and may result in legal action.<br><br>11.3. If you believe content on the Platform infringes your intellectual property rights, contact us at DYNAMICX@gmail.com and we'll address it promptly.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">12. PRODUCT INFORMATION</h4><p class="legal-text">Content on the Platform — including product descriptions, sizing guides, and imagery — is provided for general information. While we aim to keep it accurate and up to date, we make no guarantee that it is complete or error-free, and any reliance on it is at your own risk.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">13. LIMITATION OF LIABILITY</h4><p class="legal-text">13.1. Nothing in these Terms excludes or limits our liability where it would be unlawful to do so under Nigerian law (e.g. liability for personal injury caused by our negligence or fraud).<br><br>13.2. To the extent permitted by law, we exclude all warranties or representations not expressly set out in these Terms.<br><br>13.3. We're not responsible for the content of any third-party websites linked from the Platform, and we won't be liable for any loss arising from your use of them.<br><br>13.4. The Platform is provided for personal, non-commercial use. We're not liable for any loss of profit or business opportunity arising from commercial use without our written consent.<br><br>13.5. To the extent permitted by law, we won't be liable for any indirect, incidental, special, or consequential damages arising from your use of, or inability to use, the Platform or Services.<br><br>13.6. We're not liable for damage arising from unauthorised access to or use of your account, except where caused by our own negligence.<br><br>13.7. We're not liable for losses resulting from service interruptions, your inconsistent use of the Platform, account suspension taken in line with these Terms, or harmful technological elements (e.g. viruses) affecting your device through use of the Platform.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">14. INDEMNIFICATION</h4><p class="legal-text">14.1. You agree to indemnify and hold DYNAMICX harmless against any loss, damage, liability, or claim arising from your use or misuse of the Services, or your breach of these Terms or applicable law.<br><br>14.2. We reserve the right to take over the exclusive defence of any matter for which you're required to indemnify us, and you agree to cooperate with that defence.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">15. RESTRICTED ACTIVITIES</h4><p class="legal-text">The Platform must only be used for lawful purposes. You agree not to use it in a way that breaches any law, is fraudulent (including providing false identification), is detrimental to DYNAMICX, or involves modifying, decompiling, or reverse-engineering any part of the Platform's software.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">16. TERM &amp; TERMINATION</h4><p class="legal-text">These Terms take effect from the moment you start using the Platform and remain in effect until your account is closed — by you or by us.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">17. ELECTRONIC COMMUNICATION</h4><p class="legal-text">By using the Platform, you consent to receiving communications from us electronically (via email, SMS, WhatsApp, or in-app notifications), and agree that these satisfy any legal requirement for written communication. You also agree to the use of electronic signatures and records for transactions made through the Platform.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">18. PERSONAL DATA</h4><p class="legal-text">DYNAMICX collects and processes your personal data as described in our Privacy Policy, which we encourage you to read. We don't share your information with third parties except as set out in that Policy or as legally required to fulfil your order.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">19. SANCTIONS FOR BREACH</h4><p class="legal-text">If we determine that you've breached these Terms or violated applicable law, we may suspend or terminate your access to the Platform and, where appropriate, alert relevant authorities or take legal action.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">20. SEVERABILITY</h4><p class="legal-text">If any provision of these Terms is found by a competent authority to be invalid or unenforceable, that provision will be severed, and the remaining provisions will continue in full effect under Nigerian law.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">21. COMPLAINTS</h4><p class="legal-text">Questions, issues, or complaints can be sent to DYNAMICX@gmail.com or via WhatsApp at +234 806 836 0427, and we'll get back to you as soon as we can.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">22. GOVERNING LAW</h4><p class="legal-text">These Terms are governed by the laws of the Federal Republic of Nigeria. Any disputes regarding their validity, interpretation, or enforcement will be subject to the exclusive jurisdiction of the Nigerian courts.</p></div>
+        <div class="legal-section"><h4 class="legal-section-title">23. VERSION CONTROL</h4><p class="legal-text">These Terms of Use were last updated on January 2025 by DYNAMICX.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONFIRM MODAL -->
+  <div id="confirm-modal-overlay" style="display:none;" onclick="closeConfirmModal()">
+    <div class="confirm-modal" onclick="event.stopPropagation()">
+      <div class="confirm-modal-icon" id="confirm-modal-icon">🚪</div>
+      <h3 class="confirm-modal-title" id="confirm-modal-title">Log Out?</h3>
+      <p class="confirm-modal-body" id="confirm-modal-body">You will be returned to the sign-in screen.</p>
+      <div class="confirm-modal-btns">
+        <button class="confirm-cancel-btn" onclick="closeConfirmModal()">Cancel</button>
+        <button class="confirm-action-btn" id="confirm-action-btn" onclick="">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- EmailJS SDK — MUST load before project.js, or emailjs.init() in that
+       file will throw and silently break categories, cart, wishlist, etc. -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="project.js"></script>
+</body>
+</html>
